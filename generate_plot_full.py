@@ -75,8 +75,8 @@ for metric in metrics:
     # print(f"Processing {metric}: mean range = {mean_values.min()} to {mean_values.max()}, sd range = {sd_values.min()} to {sd_values.max()}")
     
     # use one sd from max and min for max and min value on each y axis
-    min_val = (mean_values - sd_values).min()
-    max_val = (mean_values + sd_values).max()
+    min_val = (mean_values - 0.5 * sd_values).min()
+    max_val = (mean_values + 0.5 * sd_values).max()
     
     # create custom y axis labels
     dimension = dict(
