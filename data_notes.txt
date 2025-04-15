@@ -1,0 +1,36 @@
+cols:
+
+Participant number: 
+Type of Diet:
+Gender:
+Age Group:
+Mean GHG emissions (GreenHouse Gas) measured in kg:
+Mean Agricultural Land Use in square meters:
+Mean Water Scarcity:
+Mean Eutrophication Potential– measured in g of PO4e, gPO4e:
+Mean GHG from CH4 emissions (Methane) from livestock management measured in kg:
+Mean GHG from N2O (Nitrous Oxide) emissions associated with fertilizer use:
+Mean Biodiversity Impact–species extinction per day:
+Mean Agricultural Water Usage in cubic meters (1 m3 - 1,000 liters):
+Mean Acidification Potential:
+
+
+Radar charts
+
+(base) - condense all rows to diet groups (both genders)
+
+(1). mean measurement by type of diet
+take the mean of all these indicators ansd use each as a angle on the radar chart
+
+Mean GHG emissions (GreenHouse Gas) measured in kg:
+Mean Agricultural Land Use in square meters:
+Mean Water Scarcity:
+Mean Eutrophication Potential– measured in g of PO4e, gPO4e:
+Mean GHG from CH4 emissions (Methane) from livestock management measured in kg:
+Mean GHG from N2O (Nitrous Oxide) emissions associated with fertilizer use:
+Mean Biodiversity Impact–species extinction per day:
+Mean Agricultural Water Usage in cubic meters (1 m3 - 1,000 liters):
+Mean Acidification Potential:
+
+(2). by gender
+compare 
