@@ -43,9 +43,9 @@ colors = {
     'veggie': '#3CB371',     # Medium sea green
     'vegan': '#98FB98',      # Pale green
     'fish': '#4682B4',       # Steel blue
-    'meat': '#FF8C00',       # Dark orange
-    'meat50': '#FF4500',     # Orange red
-    'meat100': '#FF0000'     # Bright red
+    'meat': '#E67E22',       # Carrot orange
+    'meat50': '#C0392B',     # Brick red
+    'meat100': '#8E44AD'     # Purple
 }
 
 # Create a color column for the plot
@@ -201,7 +201,7 @@ fig.add_annotation(
     opacity=0.8
 )
 
-# fig.show()
+fig.show()
 
 fig.write_html(
     "full_set_diet_parallel_coordinates.html", 
