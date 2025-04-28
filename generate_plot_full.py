@@ -17,28 +17,18 @@ new_order = [
 
 df = df[new_order]
 
-# Define the metrics we want to visualize (excluding the 'sd_' columns for the main plot)
+# get all mean_ columns to use as metrics
 metrics = [col for col in df.columns if col.startswith('mean_')]
 
-# First part: select 10 random mc_run_ids
+# select 10 random mc_run_ids
 mc_run_ids = df['mc_run_id'].unique()
-# np.random.seed(21)  # For reproducibility
 selected_mc_run_ids = np.random.choice(mc_run_ids, size=10, replace=False)
 
-# Second part: filter the DataFrame to keep only rows with the selected mc_run_ids
+# filter the df to keep only rows with the selected mc_run_ids
 filtered_df = df[df['mc_run_id'].isin(selected_mc_run_ids)]
 filtered_df = filtered_df.drop(columns=['mc_run_id'])  # Drop mc_run_id for plotting
 
 # Define a color palette for the diet groups
-# colors = {
-#     'vegan': '#1b9e77',      # Green
-#     'veggie': '#7570b3',     # Purple
-#     'fish': '#66a61e',       # Olive
-#     'meat50': '#e6ab02',     # Gold
-#     'meat': '#d95f02',       # Orange
-#     'meat100': '#e7298a'     # Pink
-# }
-
 colors = {
     'veggie': '#3CB371',     # Medium sea green
     'vegan': '#98FB98',      # Pale green
@@ -48,10 +38,10 @@ colors = {
     'meat100': '#8E44AD'     # Purple
 }
 
-# Create a color column for the plot
+# create a color column for the plot
 filtered_df['color'] = filtered_df['diet_group'].map(colors)
 
-# Create more readable labels for the metrics
+# create more readable labels for the metrics
 label_map = {
     'mean_ghgs': 'GHG Emissions (kg)',
     'mean_ghgs_ch4': 'Methane (kg)',
@@ -108,7 +98,6 @@ fig = go.Figure(data=
     )
 )
 
-# Update layout
 fig.update_layout(
     title={
         'text': "Environmental Impact of Different Diet Types",
@@ -213,7 +202,7 @@ fig.write_html(
     }
 )
 
-# Add custom centering CSS to center plot
+# add custom centering CSS to center plot
 with open("full_set_diet_parallel_coordinates.html", "r") as f:
     html_content = f.read()
 
